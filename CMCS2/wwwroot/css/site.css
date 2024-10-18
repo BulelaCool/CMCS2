@@ -1,0 +1,241 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7dcb9; /* Beige background */
+    color: #914f1e; /* Brown text */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #914f1e; /* Brown header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.brand-head {
+    font-size: 2em; /* Adjust as necessary */
+    font-weight: bold;
+    color: white;
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .navbar ul li {
+        display: inline;
+        margin-right: 15px;
+    }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            .navbar ul li a:hover {
+                color: #deac80; /* Light brown hover effect */
+            }
+
+.content {
+    padding: 40px;
+    background-color: #f7dcb9; /* Beige background for main content */
+}
+
+footer {
+    background-color: #914f1e; /* Brown footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1, h2 {
+    color: #914f1e; /* Brown for headers */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #b5c18e; /* Pale green borders */
+    text-align: left;
+}
+
+th {
+    background-color: #deac80; /* Light brown header */
+    color: white;
+}
+
+td {
+    background-color: #f7dcb9; /* Beige for table cells */
+}
+
+tr:hover {
+    background-color: #b5c18e; /* Pale green hover effect for rows */
+}
+
+/* Button Styles */
+button {
+    background-color: #914f1e; /* Brown button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #b5c18e; /* Pale green hover effect */
+    }
+
+/* Form Styles */
+form {
+    background-color: #deac80; /* Light brown form background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="number"], input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #b5c18e; /* Pale green borders */
+    border-radius: 5px;
+    background-color: #f7dcb9; /* Beige input background */
+}
+
+input:focus {
+    border-color: #b5c18e; /* Pale green focus effect */
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 96%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+/* Image animations */
+.header-image img {
+    width: 40%;
+    height: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease forwards;
+    /* Add center alignment */
+    display: block;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-image img {
+    width: 40%;
+    height: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease forwards;
+    /* Add center alignment */
+    display: block;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button hover animation */
+button:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.centered-image {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Approve Button Styles */
+.approve-btn {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .approve-btn:hover {
+        background-color: #45a049; /* Darker green hover effect */
+    }
+
+/* Reject Button Styles */
+.reject-btn {
+    background-color: #f44336; /* Red button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .reject-btn:hover {
+        background-color: #d32f2f; /* Darker red hover effect */
+    }
+

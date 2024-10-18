@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="header-image">
+    <img src="~/images/business-people-working.jpg" alt="Business Team Working" />
+</div>
+
+<div class="form-container">
+    <h1>Submit Your Claim</h1>
+
+    <div class="message-container">
+        <p class="important-message">
+            Dear Lecturers,<br><br>
+            As part of our continuous efforts to streamline our administrative processes, we kindly ask you to submit the necessary claims forms through our Contract Monthly Claim System (CMCS). This platform has been designed to make it easier for you to report and track your claims efficiently. By submitting your claims through this system, we aim to reduce paperwork, speed up processing times, and ensure that all submissions are handled securely and accurately. Your cooperation in using the CMCS will help us maintain a smooth and transparent workflow for everyone involved.
+        </p>
+    </div>
+
+    <form method="get" action="/Home/SubmitClaim">
+        <button class="submit-button" onclick="window.location.href='@Url.Action("SubmitClaim", "Home")'">
+            Submit Form
+        </button>
+    </form>
+</div>
+
+<div class="footer-image">
+    <img src="~/images/481_SkVNQSBHRVIgNzk1LTA5.jpg" alt="Professional Business Team" />
+</div>
+
+<style>
+    /* Style for the message to lecturers */
+    .message-container {
+        margin: 20px 0;
+        padding: 15px;
+        background-color: #deac80; /* Beige background for the message */
+        border: 2px solid #914f1e; /* Brown border to highlight the message */
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .important-message {
+        font-size: 18px; /* Makes the text size bigger for readability */
+        font-weight: bold; /* Bold text for emphasis */
+        color: #914f1e; /* Brown color for the text */
+    }
+
+    /* Styles for the submit button */
+    .submit-button {
+        background-color: #6C63FF;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .submit-button:hover {
+        transform: scale(1.05);
+        background-color: #5548d9;
+    }
+</style>

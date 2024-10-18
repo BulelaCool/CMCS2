@@ -1,0 +1,42 @@
+﻿@model IEnumerable<CMCS2.Models.Claim>
+
+<div class="dashboard">
+    <h2>All The Submitted Claims</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Lecturer Name</th>
+                <th>Hours Worked</th>
+                <th>Hourly Rate</th>
+                <th>Total Amount</th>
+                <th>Status</th>
+                <th>Date Submitted</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var claim in Model)
+            {
+                <tr>
+                    <td>@claim.LecturerName</td>
+                    <td>@claim.HoursWorked</td>
+                    <td>@claim.HourlyRate</td>
+                    <td>@claim.TotalAmount</td>
+                    <td>@claim.Status</td>
+                    <td>@claim.DateSubmitted</td>
+                    <td>
+                        <form asp-action="UpdateClaimStatus" asp-controller="Claims" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="@claim.Id" />
+                            <button type="submit" name="status" value="Approved" class="approve-btn">Approve</button>
+                        </form>
+                        <form asp-action="UpdateClaimStatus" asp-controller="Claims" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="@claim.Id" />
+                            <button type="submit" name="status" value="Rejected" class="reject-btn">Reject</button>
+                        </form>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

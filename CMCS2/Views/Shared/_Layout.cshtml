@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Title"] - CMCS2</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <h1 class="brand-head">Contract Monthly Claim System</h1>
+        <nav class="navbar">
+
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/Lecturer">Lecturer Dashboard</a></li>
+                <li><a href="/Home/ViewClaims">Coordinator Review</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            @RenderBody()
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 CMCS - All rights reserved</p>
+    </footer>
+</body>
+</html>
